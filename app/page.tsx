@@ -25,6 +25,18 @@ const themeCards = [
     title: "Minimal Service",
     label: "심플 전문 서비스",
     copy: "불필요한 장식을 덜고 상담과 문의로 바로 이어지는 정보 설계"
+  },
+  {
+    className: "theme-workshop",
+    title: "Craft Studio",
+    label: "공방·제품 판매",
+    copy: "제품의 질감과 제작자의 이야기를 함께 보여주는 브랜드형 구성"
+  },
+  {
+    className: "theme-beauty",
+    title: "Beauty Care",
+    label: "뷰티·미용",
+    copy: "예약, 시술, 분위기를 감각적으로 연결하는 부드러운 화면"
   }
 ];
 
@@ -100,14 +112,15 @@ export default function HomePage() {
         </section>
 
         <section className="section themes-section" id="themes" aria-labelledby="themes-title">
-          <div className="section-inner">
-            <p className="pill-eyebrow">Theme presets</p>
-            <div className="split-head">
-              <h2 className="display-title" id="themes-title">
-                Start from a visual language.
+          <div className="section-inner theme-showcase">
+            <div className="theme-heading">
+              <h2 id="themes-title">
+                보고, 고르기 쉽게 모아뒀어요.
+                <span>Canvers의 추천 테마.</span>
               </h2>
-              <p className="section-note">
-                참고 URL이 없어도 괜찮습니다. 준비된 테마를 고르면 색상, 폰트, 레이아웃, 카피 톤이 하나의 스타일 명세로 연결됩니다.
+              <p>
+                참고 URL이 없어도 괜찮습니다. 지금 바로 시작할 수 있는 스타일을 고르면
+                색상, 폰트, 레이아웃, 카피 톤이 하나의 시안으로 연결됩니다.
               </p>
             </div>
 
@@ -117,6 +130,7 @@ export default function HomePage() {
                   <span className={`theme-preview ${theme.className}`}>
                     <span className="theme-topline">{theme.label}</span>
                     <span className="sample-title">{theme.title}</span>
+                    <span className="theme-play" aria-hidden="true" />
                   </span>
                   <span className="theme-meta">
                     <h3>{theme.label}</h3>
@@ -188,6 +202,46 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        <footer className="site-footer" aria-label="SEbit Canvers footer">
+          <div className="section-inner footer-inner">
+            <div className="footer-brand">
+              <span className="brand-mark">S</span>
+              <div>
+                <strong>SEbit Canvers</strong>
+                <p>AI website proposal system by SEHYUN</p>
+              </div>
+            </div>
+
+            <div className="footer-grid">
+              <div>
+                <b>Service</b>
+                <a href="#reference">Reference</a>
+                <a href="#themes">Theme presets</a>
+                <a href="/create">Create proposal</a>
+              </div>
+              <div>
+                <b>SEbit</b>
+                <a href="#ecosystem">Ecosystem</a>
+                <a href="https://sebit.co.kr" target="_blank" rel="noreferrer">
+                  sebit.co.kr
+                </a>
+                <a href="#about">About Canvers</a>
+              </div>
+              <div>
+                <b>Company</b>
+                <span>SEHYUN</span>
+                <span>Small business web experience</span>
+                <span>AI · CMS · Lead generation</span>
+              </div>
+            </div>
+
+            <div className="footer-bottom">
+              <span>© 2026 SEbit Canvers. All rights reserved.</span>
+              <span>Designed for local brands.</span>
+            </div>
+          </div>
+        </footer>
       </main>
     </>
   );
