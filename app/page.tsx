@@ -57,7 +57,7 @@ export default function HomePage() {
         </a>
         <nav className="nav" aria-label="주요 섹션">
           <a href="#reference">Reference</a>
-          <a href="#themes">Themes</a>
+          <a href="/themes">Themes</a>
           <a href="#about">About</a>
           <a href="#ecosystem">SEbit</a>
         </nav>
@@ -71,8 +71,8 @@ export default function HomePage() {
           <div className="section-inner hero-inner">
             <p className="pill-eyebrow">AI website proposal system</p>
             <h1 id="hero-title">
-              AI with an eye
-              <span>for local brands.</span>
+              Imagine it.
+              <span>Make it real.</span>
             </h1>
             <p className="hero-lead">
               마음에 드는 사이트 URL을 넣으면 Canvers가 스타일을 읽고, 내 가게 정보로 바로 시안 화면을 만듭니다.
@@ -84,16 +84,16 @@ export default function HomePage() {
                 name="referenceUrl"
                 type="url"
                 inputMode="url"
-                placeholder="Paste a reference URL"
+                placeholder="마음에 드는 참고 사이트 주소를 붙여넣기"
                 aria-label="참고 사이트 URL"
               />
               <button className="search-button" type="submit">
-                Generate
+                시안 만들기
               </button>
             </form>
 
             <div className="reference-row" aria-label="참고 사이트">
-              <span>Get inspired by</span>
+              <span>참고 사이트 찾기</span>
               {referenceLinks.map(([label, href]) => (
                 <a className="reference-chip" href={href} target="_blank" rel="noreferrer" key={href}>
                   {label}
@@ -101,13 +101,7 @@ export default function HomePage() {
               ))}
             </div>
 
-            <div className="hero-preview" aria-hidden="true">
-              <div>
-                <span>Generated proposal</span>
-                <strong>Hapjeong Roasters</strong>
-              </div>
-              <p>Style JSON + business information + editable CMS</p>
-            </div>
+           
           </div>
         </section>
 
@@ -115,8 +109,8 @@ export default function HomePage() {
           <div className="section-inner theme-showcase">
             <div className="theme-heading">
               <h2 id="themes-title">
-                보고, 고르기 쉽게 모아뒀어요.
-                <span>Canvers의 추천 테마.</span>
+                Browse first.
+                <span>Build with a theme.</span>
               </h2>
               <p>
                 참고 URL이 없어도 괜찮습니다. 지금 바로 시작할 수 있는 스타일을 고르면
@@ -143,26 +137,54 @@ export default function HomePage() {
         </section>
 
         <section className="section about-section" id="about" aria-labelledby="about-title">
-          <div className="section-inner about-panel">
-            <div>
-              <p className="pill-eyebrow">About Canvers</p>
-              <h2 className="display-title" id="about-title">
-                좋은 가게가 좋은 첫 화면을 갖기까지.
-              </h2>
+          <div className="section-inner about-dark">
+            <div className="about-dark-head">
+              <h2 id="about-title">What kind of website do you need?</h2>
+              <p>
+                소상공인의 홈페이지 제작 환경은 빠르게 바뀌고 있습니다. Canvers는 참고 디자인, 업종 정보, AI 생성 흐름을 하나로 연결해
+                더 빠르게 시안을 보고, 더 쉽게 방향을 결정할 수 있도록 돕습니다.
+              </p>
             </div>
-            <div className="purpose-list" aria-label="서비스 목적">
-              <div className="purpose-item">
-                <b>01 / 선택을 단순하게</b>
-                <span>참고 사이트를 붙여넣거나 추천 테마를 고르는 두 가지 길만 남깁니다.</span>
-              </div>
-              <div className="purpose-item">
-                <b>02 / 내 정보로 구체화</b>
-                <span>가게명, 업종, 소개, 핵심 제공물을 넣어 실제 내 홈페이지처럼 보이게 합니다.</span>
-              </div>
-              <div className="purpose-item">
-                <b>03 / 다음 영업으로 연결</b>
-                <span>무료 시안 경험 이후 맞춤 디자인 문의로 이어지는 리드 흐름을 만듭니다.</span>
-              </div>
+
+            <div className="about-capabilities" aria-label="Canvers가 돕는 일">
+              <article className="capability-item">
+                <div className="capability-title">
+                  <span aria-hidden="true">◇</span>
+                  <h3>Visual Direction</h3>
+                </div>
+                <p>
+                  마음에 드는 사이트 URL이나 준비된 테마를 출발점으로 삼아, 색상과 타이포그래피, 레이아웃의 방향을 빠르게 정리합니다.
+                </p>
+                <p>
+                  디자인을 설명하기 어려운 고객도 “이런 느낌”을 기준으로 첫 시안을 구체화할 수 있습니다.
+                </p>
+              </article>
+
+              <article className="capability-item">
+                <div className="capability-title">
+                  <span aria-hidden="true">□</span>
+                  <h3>AI Proposal</h3>
+                </div>
+                <p>
+                  가게명, 업종, 한 줄 소개, 핵심 제공물을 조합해 실제 사업에 맞는 홈페이지 문장과 섹션 구성을 만듭니다.
+                </p>
+                <p>
+                  추상적인 템플릿이 아니라 내 가게 정보가 들어간 화면으로 제작 방향을 검토할 수 있습니다.
+                </p>
+              </article>
+
+              <article className="capability-item">
+                <div className="capability-title">
+                  <span aria-hidden="true">✦</span>
+                  <h3>CMS Ready</h3>
+                </div>
+                <p>
+                  생성된 시안은 이후 CMS에서 문구를 수정하고, 문의 흐름으로 연결할 수 있는 운영 구조를 전제로 설계됩니다.
+                </p>
+                <p>
+                  빠른 시안 확인에서 끝나지 않고 실제 제작 상담과 운영 단계까지 자연스럽게 이어집니다.
+                </p>
+              </article>
             </div>
           </div>
         </section>
@@ -191,7 +213,7 @@ export default function HomePage() {
 
               <aside className="company-card" aria-label="세현 소개">
                 <p className="pill-eyebrow">SEHYUN</p>
-                <h3>작은 사업자의 첫 화면을 설계합니다.</h3>
+                <h3>Designing the first screen for small businesses.</h3>
                 <p>
                   세현은 AI 기반 제작 흐름과 실무형 웹 운영 경험을 결합해, 초기 창업자와 소상공인이 빠르게 검증 가능한 온라인 시안을 얻도록 돕습니다.
                 </p>
@@ -217,7 +239,7 @@ export default function HomePage() {
               <div>
                 <b>Service</b>
                 <a href="#reference">Reference</a>
-                <a href="#themes">Theme presets</a>
+                <a href="/themes">Theme presets</a>
                 <a href="/create">Create proposal</a>
               </div>
               <div>
