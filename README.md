@@ -9,6 +9,7 @@ SEbit Canvers는 소상공인과 초기 창업자를 위한 AI 기반 홈페이�
 - 타이포그래피 중심 메인 홈페이지
 - 참고 URL 입력 중심의 첫 화면
 - 추천 테마 선택 섹션
+- `/themes` 추천 테마 라이브러리 페이지
 - Canvers 제작 목적을 설명하는 ABOUT 섹션
 - SEbit 생태계 및 세현 소개 섹션
 - SEbit/세현 정보가 포함된 푸터
@@ -24,8 +25,8 @@ SEbit Canvers는 소상공인과 초기 창업자를 위한 AI 기반 홈페이�
 
 ## 최근 디자인 작업
 
-- 전체 메인 페이지를 Anima 계열의 AI/SaaS 랜딩 감성으로 정리
-- 첫 화면을 큰 타이포그래피, 대형 URL 입력창, 참고 사이트 칩 중심으로 구성
+- 전체 메인 페이지를 AI SaaS와 따뜻한 소상공인 브랜딩이 섞인 타이포그래픽 랜딩으로 정리
+- 첫 화면을 영문 heading, 대형 URL 입력창, 참고 사이트 칩 중심으로 구성
 - 두 번째 섹션을 첨부 레퍼런스처럼 중앙 헤드라인과 떠 있는 카드 콜라주 형태로 변경
 - 추천 테마 카드를 5개로 확장
   - 모던 비즈니스
@@ -33,10 +34,18 @@ SEbit Canvers는 소상공인과 초기 창업자를 위한 AI 기반 홈페이�
   - 심플 전문 서비스
   - 공방·제품 판매
   - 뷰티·미용
+- `Themes` 메뉴를 별도 `/themes` 페이지로 분리
+- `/themes` 페이지를 Nuxt UI Templates 스타일의 테마 목록형 페이지로 구성
+- 세 번째 ABOUT 섹션을 어두운 배경의 전문 소개 섹션으로 변경
+  - Visual Direction
+  - AI Proposal
+  - CMS Ready
+- 네 번째 SEbit ecosystem 섹션의 영문 제목에도 동일한 영문 heading 폰트 적용
 - 카드 hover, 검색창 focus, 히어로 등장 모션 등 가벼운 애니메이션 추가
 - `prefers-reduced-motion` 대응으로 움직임 감소 설정 지원
 - 푸터에 Service, SEbit, Company 링크 및 소개 영역 추가
 - 한글 기본 폰트를 네이버 나눔고딕 계열로 설정
+- 영문 heading 폰트로 `DM Serif Display` 적용
 
 ## 기술 스택
 
@@ -57,6 +66,7 @@ app/
     leads/          문의 저장 API
     slug/check/     사이트 주소 사용 가능 여부 체크
   create/           시안 생성 폼
+  themes/           추천 테마 라이브러리 페이지
   [slug]/           생성된 공개 시안 페이지
   [slug]/cms/       CMS 편집 화면 초안
   page.tsx          메인 홈페이지
